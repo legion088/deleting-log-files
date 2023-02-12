@@ -50,7 +50,7 @@ def get_txt_logs_older_files(files: list) -> list:
 
 
 def get_files(abspath: str) -> list:
-    if not os.path.join(abspath):
+    if not os.path.exists(abspath):
         raise FileNotFoundError('path not found!')
 
     older_files = list()
